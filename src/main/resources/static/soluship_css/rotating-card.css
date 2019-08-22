@@ -1,0 +1,104 @@
+ 
+/* entire container, keeps perspective */
+.card-container {
+	  -webkit-perspective: 2000px;
+   -moz-perspective: 2000px;
+     -o-perspective: 2000px;
+        perspective: 2000px;
+        margin-bottom: 30px;
+}
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .rotatecard,
+.card-container.hover.manual-flip .rotatecard{
+	-webkit-transform: rotateX( -180deg );
+-moz-transform: rotateX( -180deg );
+ -o-transform: rotateX( -180deg );
+    transform: rotateX( -180deg );
+}
+
+
+.card-container.static:hover .rotatecard,
+.card-container.static.hover .rotatecard {
+	-webkit-transform: none;
+-moz-transform: none;
+ -o-transform: none;
+    transform: none;
+}
+/* flip speed goes here */
+.rotatecard {
+	 -webkit-transition: -webkit-transform .5s;
+   -moz-transition: -moz-transform .5s;
+     -o-transition: -o-transform .5s;
+        transition: transform .5s;
+-webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+     -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+	position: relative;
+    z-index: 2;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+	
+	background-color: #ECF0F1;
+    /*box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);*/
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* back, initially hidden pane */
+.back {
+		-webkit-transform: rotateX( 180deg );
+   -moz-transform: rotateX( 180deg );
+     -o-transform: rotateX( 180deg );
+        transform: rotateX( 180deg );
+        z-index: 3;
+        
+}
+
+ 
+/*        Style       */
+
+
+ 
+.card-container, .front, .back {
+	width: 100%;
+	min-height: 205px;
+    border-radius: 5px;
+}
+.front p, .back p {text-align: center;  padding: 5px 10px;}
+.back p {text-align: left;}
+ 
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back{
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+    .front{
+        z-index: 1;
+    }
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back{
+        z-index: 5;
+        visibility: visible;
+    }
+}

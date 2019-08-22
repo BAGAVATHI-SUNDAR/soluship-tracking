@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.soluship.tracking</groupId>
+	<artifactId>soluship-tracking</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>soluship-tracking</name>
+	<description>Rest API Project for Soluship Tracking</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.17</version><!--$NO-MVN-MAN-VER$-->
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fedex</groupId>
+			<artifactId>fedex-track-service</artifactId>
+			<version>14</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.dhl</groupId>
+			<artifactId>dhl-track-service</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.loomis</groupId>
+			<artifactId>loomis-track-service</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.ups</groupId>
+			<artifactId>ups-track-service</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.purolator</groupId>
+			<artifactId>purolator-track-service</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/axis/axis -->
+		<dependency>
+		    <groupId>axis</groupId>
+		    <artifactId>axis</artifactId>
+		    <version>1.4</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2 -->
+		<dependency>
+		    <groupId>org.apache.axis2</groupId>
+		    <artifactId>axis2</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-adb -->
+		<dependency>
+		    <groupId>org.apache.axis2</groupId>
+		    <artifactId>axis2-adb</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.axis/axis-jaxrpc -->
+		<dependency>
+		    <groupId>org.apache.axis</groupId>
+		    <artifactId>axis-jaxrpc</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-kernel -->
+		<dependency>
+		    <groupId>org.apache.axis2</groupId>
+		    <artifactId>axis2-kernel</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
+		<dependency>
+		    <groupId>com.sun.xml.bind</groupId>
+		    <artifactId>jaxb-impl</artifactId>
+		    <version>2.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+		<dependency>
+		    <groupId>org.apache.xmlbeans</groupId>
+		    <artifactId>xmlbeans</artifactId>
+		    <version>2.5.0</version>
+		</dependency>
+
+		<dependency>
+        	<groupId>org.seleniumhq.selenium</groupId>
+        	<artifactId>selenium-java</artifactId>
+    	</dependency>   
+
+		<!-- <dependency>
+        	<groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-htmlunit-driver</artifactId>
+	        <version>2.52.0</version>
+	    </dependency>  
+	    
+		<dependency>
+        	<groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>htmlunit-driver</artifactId>
+	    </dependency>   --> 	
+	    
+    	<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>24.0-jre</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			
+			<!-- <plugin>
+			    <artiactId>maven-war-plugin</artifactId>
+			    <configuration>
+			        <warSourceDirectory>${project.basedir}</warSourceDirectory>
+			        <warSourceExcludes>source\**,build\**,dist\**,WEB-INF\lib\*,WEB-INF\classes\**,build.*
+			        </warSourceExcludes>
+			        <webResources>
+			            <resource>
+			                <directory>${project.basedir}/target/classes/lib</directory>
+			                <targetPath>${project.basedir}/target/soluship-tracking-0.0.1-SNAPSHOT/WEB-INF/lib</targetPath>
+			                <includes>
+			                    <include>fedex-track-service-v14.jar</include>
+			               	</includes>
+			            </resource>
+			        </webResources>
+			    </configuration>
+			</plugin> -->
+			
+		</plugins>
+	</build>
+
+</project>

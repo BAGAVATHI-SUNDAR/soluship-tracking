@@ -1,0 +1,22 @@
+/*
+* 
+*/
+@font-face {
+  font-family: 'Tahoma';
+  src: url('Tahoma/Tahoma.eot');
+  src: url('Tahoma/Tahoma.eot?#iefix') format('embedded-opentype'),
+    url('Tahoma/Tahoma.woff') format('woff'),
+    url('Tahoma/Tahoma.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica';
+  src: url('Helvetica/helvetica.eot');
+  src: url('Helvetica/helvetica.eot?#iefix') format('embedded-opentype'),
+    url('Helvetica/helvetica.woff') format('woff'),
+    url('Helvetica/helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

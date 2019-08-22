@@ -1,0 +1,11 @@
+@media all and (-ms-high-contrast:none){
+	.table {margin-bottom: 1rem !important;} /* IE10 */ 
+    *::-ms-backdrop, .table {margin-bottom: 1rem !important;} /* IE11 */
+}
+
+
+/*----MS Edge Browser CSS Start----*/
+@supports (-ms-ime-align:auto) {    
+    .table {margin-bottom: 1rem !important;}
+}
+/*----MS Edge Browser CSS End----*/
